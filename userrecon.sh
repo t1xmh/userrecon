@@ -1,7 +1,5 @@
 #!/bin/bash
 # UserRecon v1.0
-# Author: @issamelferkh
-# Give me the credits if you use any part of this code, read the License.
 
 trap 'printf "\n";partial;exit 1' 2
 
@@ -16,7 +14,7 @@ printf "\e[1;77m | | | |___  ___ _ __|  _ \ ___  ___ ___  _ __  \e[0m\e[1;92m// 
 printf "\e[1;77m | | | / __|/ _ \ '__| |_) / _ \/ __/ _ \| '_ \ \e[0m\e[1;92m|\__\    /__/| \e[0m\n"
 printf "\e[1;77m | |_| \__ \  __/ |  |  _ <  __/ (_| (_) | | | | \e[0m\e[1;92m\    ||    / \e[0m\n"
 printf "\e[1;77m  \___/|___/\___|_|  |_| \_\___|\___\___/|_| |_|  \e[0m\e[1;92m\        / \e[0m\n"
-printf "                   \e[1;92mv1.0, Author: @issamelferkh  \e[0m   \e[1;92m\  __  / \e[0m\n"
+printf "                   \e[1;92mv1.0,                        \e[0m   \e[1;92m\  __  / \e[0m\n"
 printf "                                                    \e[1;92m'.__.' \e[0m\n"
                                                 
 
@@ -994,19 +992,6 @@ elif [[ $check1 == *'1'* ]]; then
 
 printf "\e[1;92m Found!\e[0m https://ello.co/%s\n" $username
 printf "https://ello.co/%s\n" $username >> $username.txt
-fi
-
-## Tracky
-
-printf "\e[1;77m[\e[0m\e[1;92m+\e[0m\e[1;77m] Tracky: \e[0m"
-check1=$(curl -s -i "https://tracky.com/user/$username" -H "Accept-Language: en" -L | grep -o 'profile:username' ; echo $?)
-
-if [[ $check1 == *'1'* ]] ; then 
-printf "\e[1;93mNot Found!\e[0m\n"
-elif [[ $check1 == *'0'* ]]; then 
-
-printf "\e[1;92m Found!\e[0m https://tracky.com/~%s\n" $username
-printf "https://tracky.com/~%s\n" $username >> $username.txt
 fi
 
 ## Tripit
